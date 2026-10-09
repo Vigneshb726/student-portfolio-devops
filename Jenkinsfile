@@ -8,26 +8,30 @@ pipeline {
             steps { git branch: 'main', url: 'https://github.com/Vigneshb726/student-portfolio-devops.git' }
         }
         stage('Build Image') {
-            steps { bat 'docker build -t %IMAGE% .' }
+            steps { sh 'docker build -t $IMAGE .' }
         }
         stage('Push Image') {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'dockerhub',
-                        usernameVariable: 'USER', passwordVariable: 'PASS')]) {
-                    bat 'docker login -u %USER% -p %PASS%'
-                    bat 'docker push %IMAGE%'
+                        usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
+                    sh 'echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin'
+                    sh 'docker push $IMAGE'
                 }
             }
         }
         stage('Deploy to Kubernetes') {
             steps {
-                bat 'kubectl apply -f k8s/deployment.yaml'
-                bat 'kubectl apply -f k8s/service.yaml'
-                bat 'kubectl rollout restart deployment/portfolio-deployment'
+                sh 'kubectl apply -f k8s/deployment.yaml'
+                sh 'kubectl apply -f k8s/service.yaml'
+                sh 'kubectl rollout restart deployment/portfolio-deployment'
+                sh 'kubectl rollout status deployment/portfolio-deployment'
             }
         }
         stage('Verify') {
-            steps { bat 'kubectl get pods' }
+            steps {
+                sh 'kubectl get pods'
+                sh 'kubectl get svc portfolio-service'
+            }
         }
     }
 }

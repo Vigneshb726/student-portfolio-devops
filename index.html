@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portfolio | [Your Name]</title>
+  <meta name="description" content="Portfolio of [Your Name], B.E. Computer Science Engineering student at KGiSL Institute of Technology.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="logo">&lt;<span>YN</span> /&gt;</a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Open menu">
+        <span></span>
+      </label>
+
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Home -->
+  <section id="home" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1>[Your Name]</h1>
+        <h2>Computer Science Engineering Student</h2>
+        <p class="hero-desc">
+          I build responsive web applications and enjoy automating the way they are
+          built and deployed using DevOps tools like Docker, Kubernetes and Jenkins.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View My Projects</a>
+          <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+      </div>
+      <div class="hero-avatar">
+        <div class="avatar-circle">YN</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I am a second-year <strong>B.E. Computer Science Engineering</strong> student at
+            <strong>KGiSL Institute of Technology, Coimbatore</strong>. I am passionate about
+            web development, cloud technologies and DevOps practices.
+          </p>
+          <p>
+            I enjoy turning ideas into working applications and learning how real-world
+            software is version-controlled, containerized and deployed. This portfolio itself
+            is deployed using GitHub, Docker, Kubernetes and Jenkins.
+          </p>
+        </div>
+        <div class="about-info">
+          <div class="info-card">
+            <h3>Education</h3>
+            <p>B.E. Computer Science Engineering</p>
+            <span>KGiSL Institute of Technology · 2024 – 2028</span>
+          </div>
+          <div class="info-card">
+            <h3>Interests</h3>
+            <p>Web Development, DevOps, Cloud Computing</p>
+            <span>Always learning something new</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Programming</h3>
+          <ul class="tags">
+            <li>C</li>
+            <li>Java</li>
+            <li>Python</li>
+            <li>JavaScript</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>Web Development</h3>
+          <ul class="tags">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>Responsive Design</li>
+            <li>Nginx</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>DevOps Tools</h3>
+          <ul class="tags">
+            <li>Git &amp; GitHub</li>
+            <li>Docker</li>
+            <li>Kubernetes</li>
+            <li>Jenkins</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>Databases &amp; Others</h3>
+          <ul class="tags">
+            <li>MySQL</li>
+            <li>Linux</li>
+            <li>VS Code</li>
+            <li>Problem Solving</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-top">01</div>
+          <h3>Student Portfolio DevOps</h3>
+          <p>
+            This portfolio website, containerized with Docker, deployed on Kubernetes with
+            two replicas, and automated with a Jenkins CI/CD pipeline.
+          </p>
+          <ul class="tags small">
+            <li>Docker</li><li>Kubernetes</li><li>Jenkins</li>
+          </ul>
+        </article>
+        <article class="project-card">
+          <div class="project-top">02</div>
+          <h3>Library Management System</h3>
+          <p>
+            A Java application to add, search, issue and return books, with records
+            stored in a MySQL database.
+          </p>
+          <ul class="tags small">
+            <li>Java</li><li>MySQL</li>
+          </ul>
+        </article>
+        <article class="project-card">
+          <div class="project-top">03</div>
+          <h3>Weather Dashboard</h3>
+          <p>
+            A responsive web page that shows the current weather and forecast for any
+            city using a public weather API.
+          </p>
+          <ul class="tags small">
+            <li>HTML</li><li>CSS</li><li>JavaScript</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <p class="contact-intro">
+        I'm open to internships, collaborations and learning opportunities. Feel free to reach out!
+      </p>
+      <div class="contact-grid">
+        <a class="contact-card" href="mailto:your.email@example.com">
+          <h3>Email</h3>
+          <p>your.email@example.com</p>
+        </a>
+        <a class="contact-card" href="https://github.com/your-github-username" target="_blank" rel="noopener">
+          <h3>GitHub</h3>
+          <p>github.com/your-github-username</p>
+        </a>
+        <a class="contact-card" href="https://www.linkedin.com/in/your-linkedin" target="_blank" rel="noopener">
+          <h3>LinkedIn</h3>
+          <p>linkedin.com/in/your-linkedin</p>
+        </a>
+        <div class="contact-card">
+          <h3>Location</h3>
+          <p>Coimbatore, Tamil Nadu</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 [Your Name] · Deployed with Docker, Kubernetes &amp; Jenkins</p>
+    </div>
+  </footer>
+
+</body>
+</html>
